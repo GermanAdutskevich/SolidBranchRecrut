@@ -6,22 +6,17 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ListComponent } from './list/list.component';
 import { HttpClientModule } from '@angular/common/http';
-import { CardComponent } from './card/card.component';
-
+import { TransactionTypeCard } from './transactionTypeCard/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ListComponent,
-    CardComponent
+    TransactionTypeCard,
   ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    AppRoutingModule,
-  ],
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

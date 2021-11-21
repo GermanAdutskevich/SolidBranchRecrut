@@ -7,10 +7,9 @@ import { PersonData } from '../PersonData';
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss'],
 })
-export class CardComponent implements OnInit {
+export class TransactionTypeCard implements OnInit {
   public data: PersonData[] = [];
   public types: Array<string> = [];
-  public numberOfType: number = 0;
   public numbers: Array<number> = [];
 
   constructor(private dataService: DataService) {}
@@ -19,17 +18,11 @@ export class CardComponent implements OnInit {
     this.dataService.sendGetRequestPerson().subscribe(
       (data) => {
         this.data = data as PersonData[];
-        this.types = [
-          ...new Set(this.data.map((item) => item.type)),
-        ].sort((a, b) => (a > b ? 1 : -1));
+        this.types = [...new Set(this.data.map((item) => item.type))].sort();
 
-        for (let i = 0; i < this.types.length; i++) {
+        for (const type of this.types) {
           this.numbers.push(
-            (this.numberOfType = [
-              ...new Set(
-                this.data.filter((item) => item.type === this.types[i])
-              ),
-            ].length)
+            [...new Set(this.data.filter((item) => item.type === type))].length
           );
         }
       },
