@@ -1,6 +1,6 @@
 # SolidBranchRecrut
 
-![PREVIEW](preview.jpg);
+![PREVIEW](preview.jpg)
 
 This is my first project in Angular. Here also were used Bootsrap and JSON Server.
 
