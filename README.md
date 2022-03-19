@@ -1,6 +1,10 @@
 # SolidBranchRecrut
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.12.
+This is my first project in Angular. Here also were used Bootsrap and JSON Server.
+
+To open a project, use two commands `npm run server` and then `npm start`;
+Using the database, a welcome message and information about the number of all transactions is displayed at the top of the page. There is also a button 'see transactions' that allows you to view all transactions.
+Below there are four transaction types, where the amount of the given type of transaction is displayed and the 'see all' button allows you to view detailed information about the transaction.
 
 ## Development server
 
