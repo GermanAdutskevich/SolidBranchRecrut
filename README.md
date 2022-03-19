@@ -1,5 +1,7 @@
 # SolidBranchRecrut
 
+![PREVIEW](preview.jpg);
+
 This is my first project in Angular. Here also were used Bootsrap and JSON Server.
 
 To open a project, use two commands `npm run server` and then `npm start`.
